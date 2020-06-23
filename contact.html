@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Duyen Pham - Contact </title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <header id="masthead">
+        <div class="container">
+            <a href="index.html" id="logo"> Duyen Pham </a>
+            <nav>
+                <a href="index.html"> About </a>
+                <a href="portfolio.html"> Portfolio </a>
+                <a href="contact.html"> Contact </a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="main-container" class="container">
+        <section class="main-section">
+            <h1> Contact </h1>
+
+            <form id="contact-form">
+                <ul>
+                    <li>
+                        <label for="contactName"> Name </label>
+                        <input type="text" id="contactName" name="contactName" placeholder="John Smith" required="required" />
+                    </li>
+
+                    <li>
+                        <label for="contactEmail"> Email </label>
+                        <input type="email" id="contactEmail" name="contactEmail" placeholder="example@gmail.com"
+                            required="required" />
+                    </li>
+
+                    <li>
+                        <label for="contactSubject"> Subject </label>
+                        <input type="text" id="contactSubject" name="contactSubject" required="required"></input>
+                    </li>
+
+                    <li>
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="contactMessage" required="required"></textarea>
+                    </li>
+                </ul>
+
+                <input type="submit" name="submit" />
+            </form>
+        </section>
+
+        <section class="sidebar">
+            <div id="connect">
+                <h2>Connect with Me</h2>
+
+                <a href="https://github.com/phtrmd8" target="_blank">
+                    <img src="assets/images/github.png" class="social" alt="Github" />
+                </a>
+                <a href="https://www.linkedin.com/in/duyen-pham-4696791a6/" target="_blank">
+                    <img src="assets/images/LinkedIn.png" class="social" alt="LinkedIn" />
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            &copy; Created by Duyen Pham © 2020
+        </div>
+    </footer>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDgcbXX9KomP8rYqSATB6dn2NBgGmffFX8",
+            authDomain: "portfolio-contact-60d7a.firebaseapp.com",
+            databaseURL: "https://portfolio-contact-60d7a.firebaseio.com",
+            projectId: "portfolio-contact-60d7a",
+            storageBucket: "",
+            messagingSenderId: "713445473274"
+        };
+        firebase.initializeApp(config);
+
+        var db = firebase.database();
+        var contactRef = db.ref("/contact");
+        var form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', formSubmit);
+
+        function formSubmit(e) {
+            e.preventDefault();
+            contactRef.push({
+                name: document.getElementById('contactName').value,
+                email: document.getElementById('contactEmail').value,
+                message: document.getElementById('contactMessage').value
+            })
+            form.reset()
+        }
+    </script>
+</body>
+
+</html>

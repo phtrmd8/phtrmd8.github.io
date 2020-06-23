@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie|Dosis|Passion+One');
+/* make sure border & padding are included in total size when w&h are set */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: url('../images/pink_rice.png');
+    font-size: 18px;
+    line-height: 34px;
+    font-family: 'Dosis', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #470a0a;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
+}
+
+h1, h2, h3, p {
+    margin-bottom: 20px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Passion One', 'Georgia', Times, 'Times New Roman', serif;
+    font-weight: 700;
+    color: rgb(228, 60, 124);
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 49px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #470a0a;
+}
+
+h2, h3 {
+    font-size: 22px;
+}
+
+/* header */
+
+#masthead {
+    width: 100%;
+    margin: 0 0 30px;
+    z-index: 99;
+    overflow: auto;
+    position: fixed;
+    background: #fff;
+    border-bottom: 2px solid #470a0a;
+}
+
+#logo {
+    width: 350px;
+    height: 90px;
+    float: left;
+    text-align: center;
+    font-family: 'Cookie', 'Georgia', Times, 'Times New Roman', serif;
+    line-height: 90px;
+    font-weight: 700;
+    font-size: 50px;
+    text-decoration: none;
+    background: #4f89bc;
+    color: #fff;
+}
+
+nav {
+    float: right;
+    margin-top: 25px;
+}
+
+nav a {
+    display: inline-block;
+    margin-left: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+    line-height: 20px;
+    color: #999;
+    border-left: 1px solid #efefef;
+}
+
+nav a:first-child {
+    border-left: 0 none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #470a0a;
+}
+
+/* main */
+
+#main-container {
+    padding-top: 130px;
+    min-height: 100%;
+}
+
+.main-section {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    margin: 0 40px 40px 0;
+    float: left;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.auth-image {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    float: left;
+    margin-right: 25px;
+}
+
+/* sidebar */
+
+.sidebar {
+    width: 100%;
+    max-width: 270px;
+    padding: 30px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.sidebar a:hover img {
+    border: 3px solid #470a0a;
+}
+
+h3, .sidebar, h2 {
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    border-bottom: 2px solid #eee;
+}
+
+.social {
+    width: 62px;
+    height: 62px;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+.social:last-child {
+    margin-right: 0;
+}
+
+/* footer */
+
+footer {
+    clear: both;
+    font-size: 12px;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: -102px;
+    border-top: 8px solid rgb(75, 115, 190);
+    background: rgb(136, 178, 218);
+    color: rgb(5, 16, 20);
+}
+
+/* portfolio */
+
+.work {
+    width: 274px;
+    overflow: auto;
+    position: relative;
+    float: left;
+    margin: 20px 0 25px;
+}
+
+.work:nth-child(even) {
+    margin-right: 40px;
+}
+
+.work img {
+    width: 100%;
+    border: 0 none;
+    opacity: .8;
+}
+
+.work h3 {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    padding: 15px;
+    line-height: 30px;
+    border-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 300;
+    background: #bc4f5e;
+    color: #fff;
+}
+
+/* animation, commented out because it's obnoxious */
+
+/*.work:hover {
+    animation-name: portfolioAnim;
+    animation-duration: 1s;
+}*/
+
+/* contact */
+
+#contact-form ul {
+    margin-bottom: 20px;
+}
+
+#contact-form li {
+    margin-bottom: 10px;
+}
+
+label, input[type=text], input[type=email], textarea {
+    display: block;
+    width: 100%
+}
+
+input[type=text], input[type=email], textarea {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    height: 200px;
+}
+
+input[type=submit] {
+    border: 0 none;
+    font-size: 18px;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: #ca5968;
+    color: #fff;
+}
+
+/* animation */
+
+@-moz-keyframes portfolioAnim {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes portfolioAnim {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes portfolioAnim {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* media queries */
+
+@media screen and (max-width: 980px) {
+    .container {
+        max-width: 760px;
+    }
+    .main-section {
+        max-width: 450px;
+    }
+    .auth-image, .work {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 650px;
+    }
+    .main-section, .sidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+    .auth-image {
+        width: 50%;
+    }
+    .sidebar {
+        margin-bottom: 40px;
+    }
+    .work {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #masthead {
+        position: static;
+    }
+    #logo, nav {
+        width: 100%;
+        text-align: center;
+    }
+    nav {
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+        white-space: nowrap;
+    }
+    nav a {
+        margin: 0;
+        width: 33.33%;
+    }
+    #main-container {
+        padding-top: 10px;
+        max-width: 590px;
+    }
+    .auth-image, .work {
+        width: 100%;
+    }
+}
