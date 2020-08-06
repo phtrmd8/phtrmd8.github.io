@@ -1,4 +1,8 @@
 # phtrmd8.github.io
  Portfolio of Duyen Pham
 
- Check out my site @ https://phtrmd8.github.io/ 
+## Welcome!
+
+Check out my sites:
+GitHub: @ https://phtrmd8.github.io/
+LinkedIn: @ https://www.linkedin.com/in/duyen-pham-4696791a6/
