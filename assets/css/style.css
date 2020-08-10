@@ -105,7 +105,8 @@ nav a:hover {
     float: left;
     margin-top: 25px;
     overflow: hidden;
-    background-color: silver;    /*f3e4c9*/
+    background-color: silver;
+    /*f3e4c9*/
 }
 
 .navbar a {
@@ -127,7 +128,7 @@ nav a:hover {
     border: none;
     outline: none;
     color: black;
-    padding: 14px 16px;
+    padding: 17px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -164,183 +165,225 @@ nav a:hover {
 }
 
 /* main */
-    #main-container {
-        padding-top: 130px;
-        min-height: 100%;
+
+#main-container {
+    padding-top: 130px;
+    min-height: 100%;
+}
+
+.main-section {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    margin: 0 40px 40px 0;
+    float: left;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.auth-image {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    float: left;
+    margin-right: 25px;
+}
+
+/* sidebar */
+
+.sidebar {
+    width: 100%;
+    max-width: 270px;
+    padding: 30px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.sidebar a:hover img {
+    border: 3px solid #470a0a;
+}
+
+h3, .sidebar, h2 {
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    border-bottom: 2px solid #eee;
+}
+
+.social {
+    width: 62px;
+    height: 62px;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+.social:last-child {
+    margin-right: 0;
+}
+
+/* footer */
+
+footer {
+    clear: both;
+    font-size: 15px;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: -102px;
+    border-top: 8px solid rgb(75, 115, 190);
+    background: rgb(136, 178, 218);
+    color: rgb(5, 16, 20);
+}
+
+/* portfolio */
+
+.work {
+    width: 274px;
+    overflow: auto;
+    position: relative;
+    float: left;
+    margin: 20px 0 25px;
+    cursor: pointer;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+}
+
+/* .work:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+} */
+
+.work:nth-child(even) {
+    margin-right: 40px;
+}
+
+.work img {
+    width: 100%;
+    /* max-width: 270px; */
+    border: 0 none;
+    opacity: .8;
+}
+
+.work h3 {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    padding: 1px;
+    line-height: 30px;
+    border-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 300;
+    /* background: #bc4f5e; */
+    background-color: rgba(74, 170, 165, .7); 
+    color: #fff;
+}
+
+/* contact */
+
+#contact-form ul {
+    margin-bottom: 20px;
+}
+
+#contact-form li {
+    margin-bottom: 10px;
+}
+
+label, input[type=text], input[type=email], textarea {
+    display: block;
+    width: 100%
+}
+
+input[type=text], input[type=email], textarea {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    height: 200px;
+}
+
+input[type=submit] {
+    border: 0 none;
+    font-size: 18px;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: #ca5968;
+    color: #fff;
+}
+
+/* animation */
+
+@-moz-keyframes portfolioAnim {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes portfolioAnim {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes portfolioAnim {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* media queries */
+
+@media screen and (max-width: 980px) {
+    .container {
+        max-width: 760px;
     }
     .main-section {
+        max-width: 450px;
+    }
+    .auth-image, .work {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
         max-width: 650px;
-        padding: 30px;
-        margin: 0 40px 40px 0;
-        float: left;
-        border: 1px solid #ddd;
-        background: #fff;
+    }
+    .main-section, .sidebar {
+        width: 100%;
+        max-width: 100%;
     }
     .auth-image {
-        width: 200px;
-        height: auto;
-        margin-top: 10px;
-        float: left;
-        margin-right: 25px;
+        width: 50%;
     }
-    /* sidebar */
     .sidebar {
-        width: 100%;
-        max-width: 270px;
-        padding: 30px;
-        margin-bottom: 20px;
-        float: left;
-        border: 1px solid #ddd;
-        background: #fff;
+        margin-bottom: 40px;
     }
-    .sidebar a:hover img {
-        border: 3px solid #470a0a;
-    }
-    h3, .sidebar, h2 {
-        padding-bottom: 20px;
-        margin-bottom: 15px;
-        line-height: 22px;
-        border-bottom: 2px solid #eee;
-    }
-    .social {
-        width: 62px;
-        height: 62px;
-        margin-top: 8px;
-        margin-right: 5px;
-    }
-    .social:last-child {
-        margin-right: 0;
-    }
-    /* footer */
-    footer {
-        clear: both;
-        font-size: 15px;
-        text-align: center;
-        padding: 30px 0;
-        margin-top: -102px;
-        border-top: 8px solid rgb(75, 115, 190);
-        background: rgb(136, 178, 218);
-        color: rgb(5, 16, 20);
-    }
-    /* portfolio */
     .work {
-        width: 274px;
-        overflow: auto;
-        position: relative;
-        float: left;
-        margin: 20px 0 25px;
+        width: 45%;
     }
-    .work:nth-child(even) {
-        margin-right: 40px;
+}
+
+@media screen and (max-width: 640px) {
+    #masthead {
+        position: static;
     }
-    .work img {
+    #logo, nav {
         width: 100%;
-        border: 0 none;
-        opacity: .8;
-    }
-    .work h3 {
-        width: 100%;
-        position: absolute;
-        bottom: 20px;
-        padding: 15px;
-        line-height: 30px;
-        border-bottom: 0;
-        margin-bottom: 0;
         text-align: center;
-        font-weight: 300;
-        background: #bc4f5e;
-        color: #fff;
     }
-    /* animation, commented out because it's obnoxious */
-    /*.work:hover {
-    animation-name: portfolioAnim;
-    animation-duration: 1s;
-}*/
-    /* contact */
-    #contact-form ul {
-        margin-bottom: 20px;
-    }
-    #contact-form li {
-        margin-bottom: 10px;
-    }
-    label, input[type=text], input[type=email], textarea {
-        display: block;
-        width: 100%
-    }
-    input[type=text], input[type=email], textarea {
-        height: 35px;
-        padding: 0 10px;
-        font-size: 14px;
-        border: 1px solid #ddd;
-    }
-    textarea {
-        height: 200px;
-    }
-    input[type=submit] {
-        border: 0 none;
-        font-size: 18px;
-        padding: 10px 30px;
-        cursor: pointer;
-        background: #ca5968;
-        color: #fff;
-    }
-    /* animation */
-    @-moz-keyframes portfolioAnim {
-        100% {
-            -moz-transform: rotate(360deg);
-        }
-    }
-    @-webkit-keyframes portfolioAnim {
-        100% {
-            -webkit-transform: rotate(360deg);
-        }
-    }
-    @keyframes portfolioAnim {
-        100% {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-        }
-    }
-    /* media queries */
-    @media screen and (max-width: 980px) {
-        .container {
-            max-width: 760px;
-        }
-        .main-section {
-            max-width: 450px;
-        }
-        .auth-image, .work {
-            width: 100%;
-        }
-    }
-    @media screen and (max-width: 768px) {
-        .container {
-            max-width: 650px;
-        }
-        .main-section, .sidebar {
-            width: 100%;
-            max-width: 100%;
-        }
-        .auth-image {
-            width: 50%;
-        }
-        .sidebar {
-            margin-bottom: 40px;
-        }
-        .work {
-            width: 45%;
-        }
-    }
-    @media screen and (max-width: 640px) {
-        #masthead {
-            position: static;
-        }
-        #logo, nav {
-            width: 100%;
-            text-align: center;
-        }
-        nav {
+    /* nav {
             width: 100%;
             margin: 10px 0;
             padding: 0;
@@ -349,12 +392,12 @@ nav a:hover {
         nav a {
             margin: 0;
             width: 33.33%;
-        }
-        #main-container {
-            padding-top: 10px;
-            max-width: 590px;
-        }
-        .auth-image, .work {
-            width: 100%;
-        }
+        } */
+    #main-container {
+        padding-top: 10px;
+        max-width: 590px;
     }
+    .auth-image, .work {
+        width: 100%;
+    }
+}
